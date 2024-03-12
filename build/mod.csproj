@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B07BDC3C-3770-4A07-90D8-5C2A68E2172B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeepDuckGalactic</RootNamespace>
+    <AssemblyName>DeepDuckGalactic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DuckGame">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Duck Game\DuckGame.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Grenades\CryoGrenade.cs" />
+    <Compile Include="src\Grenades\ImpactAxe.cs" />
+    <Compile Include="src\Grenades\InhibitorFieldGenerator.cs" />
+    <Compile Include="src\Grenades\LeadBurster.cs" />
+    <Compile Include="src\Grenades\Lure.cs" />
+    <Compile Include="src\Grenades\PlasmaBurster.cs" />
+    <Compile Include="src\Grenades\SatchelCharge.cs" />
+    <Compile Include="src\Grenades\SpringloadedRipper.cs" />
+    <Compile Include="src\Grenades\StickyGrenade.cs" />
+    <Compile Include="src\SupportTools\FlareGun.cs" />
+    <Compile Include="src\SupportTools\GrapplingHook.cs" />
+    <Compile Include="src\SupportTools\LMGPlatform.cs" />
+    <Compile Include="src\SupportTools\PlatformGun.cs" />
+    <Compile Include="src\SupportTools\PowerDrills.cs" />
+    <Compile Include="src\SupportTools\ReinforcedPowerDrills.cs" />
+    <Compile Include="src\SupportTools\ShieldGenerator.cs" />
+    <Compile Include="src\SupportTools\ZiplineLauncher.cs" />
+    <Compile Include="src\Weapons\Driller\CryoCannon.cs" />
+    <Compile Include="src\Weapons\Engineer\BreachCutter.cs" />
+    <Compile Include="src\Weapons\Gunner\Bulldog.cs" />
+    <Compile Include="src\Weapons\Driller\CRSPRFlamethrower.cs" />
+    <Compile Include="src\Weapons\Scout\DeepcoreGK2.cs" />
+    <Compile Include="src\Weapons\Engineer\DeepcorePGL.cs" />
+    <Compile Include="src\Weapons\Gunner\LeadStorm.cs" />
+    <Compile Include="src\Mod.cs" />
+    <Compile Include="src\Weapons\Engineer\Warthog.cs" />
+    <Compile Include="src\Weapons\Scout\Zhukov.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
